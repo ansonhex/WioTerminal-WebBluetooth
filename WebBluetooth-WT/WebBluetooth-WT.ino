@@ -53,8 +53,6 @@ void initBLE() {
   BLEService *pBattery = pServer->createService(BatteryService);
 
   pBattery->addCharacteristic(&BatteryLevelCharacteristic);
-//  BatteryLevelDescriptor.setValue("Percentage 0 - 100");
-//  BatteryLevelCharacteristic.addDescriptor(&BatteryLevelDescriptor);
   BatteryLevelCharacteristic.addDescriptor(new BLE2902());
 
 
